@@ -1,0 +1,22 @@
+{
+  "name": "transrights.xyz",
+  "version": "1.0.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ch0rl/transrights.xyz.git"
+  },
+  "license": "OQL",
+  "author": "",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "astro": "^5.15.4"
+  },
+  "engines": {
+    "node": "^20.0.0"
+  }
+}

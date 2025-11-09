@@ -1,0 +1,36 @@
+---
+import Layout from '../layouts/Layout.astro';
+import References from "../components/References.astro";
+---
+
+<Layout>
+    <div class="container">
+        <nav class="nav bg-body-tertiary" style="border-radius: 1em 1em 0 0; padding: 1em;">
+            <h3 class="m-0"><a class="nav-link tab-link clickable" onclick="change_tab('intl')">International Opinion</a></h3>
+            <h3 class="m-0"><a class="nav-link tab-link clickable" onclick="change_tab('uk')">UK Situation</a></h3>
+        </nav>
+        <div class="bg-body" style="border-radius: 0 0 1em 1em; padding: 2em;">
+            <slot />
+            <References />
+        </div>
+    </div>
+</Layout>
+
+<script is:inline>
+    /* Tab toggler */
+    function change_tab(to) {
+        if (to === "uk") {
+            old = document.getElementById("tab:intl");
+            _new = document.getElementById("tab:uk");
+        } else {
+            old = document.getElementById("tab:uk");
+            _new = document.getElementById("tab:intl");
+        }
+
+        old.hidden = true;
+        _new.hidden = false;
+
+        old.ariaHidden = "true";
+        _new.ariaHidden = "false";
+    }
+</script>
